@@ -1,0 +1,197 @@
+/* Estilo para a página */
+.body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #352429, #352429);
+    padding: 0;
+    color: white;
+}
+
+/* Estilo do topo da página */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #352429;
+    color: white;
+    position: relative;
+    margin-top: 0px;
+    border-radius: 10px 10px 0 0;
+}
+
+.cabeçalho {
+    display: flex;
+    align-items: center;
+}
+
+.banner-imagens {
+    height: 60px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.login-cadastro {
+    display: flex;
+    gap: 15px;
+}
+
+.link-cadastro, .link-carrinho {
+    padding: 5px 15px;
+    background-color: #a53723;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.link-cadastro:hover, .link-carrinho:hover {
+    background-color: #ff0000;
+    color: black;
+}
+
+/* Estilo de navegação */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.box {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #a53723;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5%;
+    font-size: 18px;
+    border: 5px solid #000000;
+}
+
+.box:hover {
+    background-color: white;
+    color: #000000;
+}
+
+/* Estilização do carrossel */
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border-color: #000000;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.9s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo das seções */
+.boas-vindas, .sobre-nos {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.sobre-nos h2 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Estilo do rodapé */
+.rodape {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #352429, #a53723);
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 568px) {
+    .cabeçalho h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-imagens {
+        height: 80px;
+    }
+
+    .box {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .carousel {
+        max-width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    .box {
+        font-size: 0.8em;
+    }
+
+    .carousel {
+        max-width: 100%;
+        height: 180px;
+    }
+}
